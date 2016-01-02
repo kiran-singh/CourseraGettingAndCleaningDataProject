@@ -16,7 +16,7 @@ trainingSet <- cbind(trainingSet.Subjects, trainingSet.Labels, trainingSet)
 testSet <- read.table("test/X_test.txt")[requiredFeatures]
 testSet.Labels <- read.table("test/Y_test.txt")
 testSet.Subjects <- read.table("test/subject_test.txt")
-testSet <- cbind(testSubjects, testActivities, testSet)
+testSet <- cbind(testSet.Subjects, testSet.Labels, testSet)
 
 allData <- rbind(trainingSet, testSet)
 
